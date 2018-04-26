@@ -1,0 +1,42 @@
+.cmb-advanced-list .cmb2-media-item {
+    position: relative;
+}
+
+.cmb-advanced-list .cmb2-media-item .cmb2-remove-wrapper .cmb2-remove-file-button {
+    background: url(../../cmb2/images/ico-delete.png);
+    height: 16px;
+    left: -5px;
+    position: absolute;
+    text-indent: -9999px;
+    top: -5px;
+    width: 16px;
+}
+.cmb-advanced-list .cmb2-media-item .attachment-item {
+
+}
+
+.cmb-advanced-list .cmb2-media-item .attachment-item:after,
+.cmb-advanced-list .cmb2-media-item .embed-item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cmb-advanced-list .cmb2-media-item .attachment-item .item-preview,
+.cmb-advanced-list .cmb2-media-item .embed-item .item-preview {
+    float: left;
+    width: 200px;
+    padding-right: 8px;
+}
+
+.cmb-advanced-list .cmb2-media-item .embed-item .item-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cmb-advanced-list .cmb2-media-item .attachment-item .item-details,
+.cmb-advanced-list .cmb2-media-item .embed-item .item-details {
+    float: left;
+    max-width: calc(100% - 200px);
+    min-width: 300px;
+}
