@@ -90,10 +90,10 @@ if ( ! class_exists( 'EDD_Infinite_Scroll_Functions' ) ) {
          * @since       1.0.0
          */
         public function downloads_shortcode( $display, $atts ) {
-            if( $atts['infinite_scroll'] == 'yes' && ! defined( 'DOING_EDD_INFINITE_SCROLL_AJAX' ) ) {
+            if ( $atts['infinite_scroll'] == 'yes' && ! defined( 'DOING_EDD_INFINITE_SCROLL_AJAX' ) ) {
                     if ( get_query_var('paged') )
                         $paged = get_query_var('paged');
-                    else if (get_query_var('page'))
+                    else if ( get_query_var('page') )
                         $paged = get_query_var('page');
                     else
                         $paged = 1;
@@ -102,11 +102,11 @@ if ( ! class_exists( 'EDD_Infinite_Scroll_Functions' ) ) {
                     <form id="edd-infinite-scrolling-shortcode-atts" action="">
                         <?php foreach ( $atts as $key => $value ) : ?>
                             <?php if ( ! empty( $value ) ) : ?>
-                                <input type="hidden" name="shortcode_atts[<?php echo $key; ?>]" value="<?php echo $value; ?>">
+                                <input type="hidden" name="shortcode_atts[<?php echo esc_attr( $key ); ?>]" value="<?php echo esc_attr( $value ); ?>">
                             <?php endif; ?>
                         <?php endforeach; ?>
 
-                        <input type="hidden" name="paged" value="<?php echo $paged; ?>">
+                        <input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>">
                     </form>
                     <?php $shortcode_atts_form = ob_get_clean();
 
