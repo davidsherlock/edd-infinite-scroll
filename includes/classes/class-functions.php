@@ -77,7 +77,7 @@ if ( ! class_exists( 'EDD_Infinite_Scroll_Functions' ) ) {
          * @since       1.0.0
          */
         public function edd_downloads_list_wrapper_class( $wrapper_class, $atts ) {
-            if ( $atts['infinite_scroll'] == 'yes' ) {
+            if ( ! empty( $atts ) && $atts['infinite_scroll'] == 'yes' ) {
                 $wrapper_class .= ' edd-infinite-scrolling';
             }
 
